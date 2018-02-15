@@ -63,6 +63,12 @@ class SenseHatPlugin {
 
         // adding air pressure characteristic to temperature service, this enables the eve app to
         // display the air pressure.
+        //Elgato
+        const ATMOSPHERIC_PRESSURE_STYPE_ID = "B77831FD-D66A-46A4-B66D-FD7EE8DFE3CE";
+        const ATMOSPHERIC_PRESSURE_CTYPE_ID = "E863F10F-079E-48FF-8F27-9C2605A29F52";
+
+        CommunityTypes.AtmosphericPressureLevel.UUID = ATMOSPHERIC_PRESSURE_CTYPE_ID;
+        CommunityTypes.AtmosphericPressureSensor.UUID = ATMOSPHERIC_PRESSURE_STYPE_ID;
         this.temperatureService.addCharacteristic(CommunityTypes.AtmosphericPressureLevel);
         this.temperatureService.getCharacteristic(CommunityTypes.AtmosphericPressureLevel)
             .on('get', this.getCurrentPressure.bind(this));
