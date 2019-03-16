@@ -20,5 +20,4 @@ sense = SenseHat()
 
 humidity = sense.get_humidity()
 pressure = sense.get_pressure()
-
-print("%s %s %s" % (get_temp(sense), humidity, pressure))
+#print("%s %s %s" % (get_temp(sense), humidity, pressure))

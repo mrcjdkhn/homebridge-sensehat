@@ -103,12 +103,12 @@ class SenseHatPlugin {
             temperature = parseFloat(values[0]);
             humidity = parseFloat(values[1]);
             pressure = parseFloat(values[2]);
-            console.log(temperature, humidity, pressure);
+            //console.log(temperature, humidity, pressure);
         });
     }
 
     setLeds() {
-        console.log(hue, saturation, brightness, power);
+        //console.log(hue, saturation, brightness, power);
         var cmdLine = "python " + script_path + "leds.py " +
             hue + " " + saturation + " " + brightness + " " + power;
         exec(cmdLine, (error, stdout, stderr) => {
